@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px 0;
+    background: #0f1b2d;
+    color: #d6ebfa;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.game-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    width: min(760px, 92vw);
+    padding: 36px 48px;
+    background: #16263f;
+    border: 1px solid #2f5a8f ;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.player-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    flex: 0 0 170px;
+}
+
+.player-column h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #d6ebfa;
+}
+
+.score-box {
+    width: 170px;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f1b2d;
+    background: #6cb4e4;
+    border-radius: 6px;
+}
+
+.card-container {
+    width: 150px;
+    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1d3354;
+    border: 2px dashed #2f5a8f ;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.card-container img[src=""] {
+    visibility: hidden;
+}
+
+.center-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding-top: 12px;
+}
+
+#attempt-counter {
+    font-size: 17px;
+    font-style: italic;
+    color: #6cb4e4;
+}
+
+#generate-btn {
+    width: 100%;
+    max-width: 190px;
+    padding: 16px 0;
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f2f9ff;
+    background: #2f6fb5;
+    border: 2px solid #1f4f86;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#generate-btn:hover:not(:disabled) {
+    background: #1f4f86;
+}
+
+#generate-btn:active:not(:disabled) {
+    transform: translateY(2px);
+}
+
+#generate-btn:focus-visible {
+    outline: 3px solid #6cb4e4;
+    outline-offset: 3px;
+}
+
+#generate-btn:disabled {
+    background: #2a3a52;
+    border-color: #3a4d6b ;
+    color: #7f93ad ;
+    cursor: not-allowed;
+}
+
+#result-message {
+    min-height: 32px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #6cb4e4 ;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        gap: 12px;
+        padding: 24px 12px;
+    }
+
+    .player-column {
+        flex: 0 0 96px;
+    }
+
+    .player-column h2 {
+        font-size: 18px;
+    }
+
+    .score-box {
+        width: 96px;
+        font-size: 15px;
+    }
+
+    .card-container {
+        width: 90px;
+        height: 130px;
+    }
+
+    #attempt-counter {
+        font-size: 14px;
+    }
+
+    #generate-btn {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    #result-message {
+        font-size: 18px;
+    }
+}

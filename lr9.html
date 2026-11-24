@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра «21»</title>
+    <link rel="stylesheet" href="lr9.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="player-column">
+            <h2 id="user-name">User</h2>
+            <div class="score-box" id="user-score">0</div>
+            <div class="card-container" id="user-card">
+                <img src="" alt="Карта гравця" id="user-card-img">
+            </div>
+        </div>
+
+        <div class="center-column">
+            <p id="attempt-counter">Спроба 0 з 3</p>
+            <button type="button" id="generate-btn">Generate</button>
+        </div>
+
+        <div class="player-column">
+            <h2>Computer</h2>
+            <div class="score-box" id="comp-score">0</div>
+            <div class="card-container" id="comp-card">
+                <img src="" alt="Карта комп'ютера" id="comp-card-img">
+            </div>
+        </div>
+    </div>
+
+    <p id="result-message"></p>
+
+    <script src="lr9.js"></script>
+</body>
+</html>
